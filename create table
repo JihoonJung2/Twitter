@@ -30,5 +30,9 @@ CREATE TABLE article_content (
     article_id VARCHAR(20) PRIMARY KEY REFERENCES article(article_id),
     article_message VARCHAR(16000)
 );
-
+CREATE TABLE comment (
+	comment_id VARCHAR(15) PRIMARY KEY,
+    article_id VARCHAR(20) REFERENCES article(article_id),
+    user_id VARCHAR(20) REFERENCES user(id)
+);
 
