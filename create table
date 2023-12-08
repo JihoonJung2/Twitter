@@ -23,8 +23,7 @@ CREATE TABLE follow(
 CREATE TABLE article (
     article_id VARCHAR(20) PRIMARY KEY,
     user_id VARCHAR(15) REFERENCES user(id),
-    date INT(8),
-    tag VARCHAR(100)
+    date INT(8)
 );
 
 CREATE TABLE article_content (
@@ -32,8 +31,4 @@ CREATE TABLE article_content (
     article_message VARCHAR(16000)
 );
 
-CREATE TABLE comment (
-	comment_id VARCHAR(15) PRIMARY KEY,
-    article_id VARCHAR(20) REFERENCES article(article_id),
-    user_id VARCHAR(20) REFERENCES user(id)
-);
+
